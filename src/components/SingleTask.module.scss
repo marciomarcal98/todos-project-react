@@ -1,0 +1,67 @@
+@use '../scss/colors';
+
+.task {
+    background: colors.$gray-700;
+    border-radius: 8px;
+    border: 1px solid colors.$gray-600;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+
+    .taskDescription {
+        display: grid;
+        grid-template-columns: 1.5rem 1fr;
+        gap: 0.75rem;
+
+        .lineThrough {
+            text-decoration: line-through;
+        }
+    
+        p {
+            color: colors.$white;
+            font-size: 0.875rem;
+            line-height: 1.4;
+            cursor: pointer;
+        }
+
+        .circle {
+            color: colors.$blue-500;
+        }
+
+        .checkCircle {
+            color: colors.$purple-500;
+        }
+
+        &:hover {
+            .circle {
+                color: colors.$blue-300;
+                cursor: pointer;
+            }
+
+            .checkCircle {
+                color: colors.$purple-300;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .deleteTask {
+        border: none;
+        background: transparent;
+        padding: 0.375rem;
+        color: colors.$gray-500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        margin-left: 1.125rem;
+
+        &:hover {
+            background: colors.$gray-600;
+            color: colors.$red-500;
+            cursor: pointer;
+        }
+    }
+}

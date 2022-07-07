@@ -1,0 +1,8 @@
+@use './scss/colors';
+
+.wrapper {
+    main {
+        background: colors.$gray-800;
+        min-height: calc(100vh - 200px)
+    }
+}

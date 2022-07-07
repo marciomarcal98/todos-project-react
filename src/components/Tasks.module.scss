@@ -1,0 +1,109 @@
+@use '../scss/colors';
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+
+    input {
+        background: colors.$gray-700;
+        padding: 1rem;
+        border-radius: 8px;
+        border: none;
+        width: 100%;
+        max-width: 39.875rem;
+        color: colors.$white;
+        margin-right: 0.5rem;
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-top: -1.6875rem;
+        border: 1px solid colors.$gray-900;
+
+        &::placeholder {
+            color: colors.$gray-500;
+        }
+
+        &:focus {
+            outline: 1px solid colors.$purple-500;
+        }
+    }
+
+    button {
+        margin-top: -1.6875rem;
+        font-size: 0.875rem;
+        padding: 1rem;
+        border-radius: 8px;
+        border: none;
+        display: flex;
+        align-items: center;
+        background: colors.$blue-500;
+        font-weight: 700;
+        line-height: 1.4;
+        color: colors.$white;
+        transition: background-color 0.3s;
+
+        &:not(:disabled):hover {
+            background: colors.$blue-300;
+            cursor: pointer;
+        }
+
+        &:disabled {
+            opacity: 0.7;
+            cursor: not-allowed
+        }
+
+        svg {
+            margin-left: 0.5rem;
+        }
+    }
+}
+
+.tasks {
+    max-width: 46rem;
+    margin-inline: auto;
+
+    .tasksCount {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+
+        .created {
+            line-height: 1.4;
+            font-size: 0.875rem;
+            color: colors.$blue-300;
+        }
+
+        .concluded {
+            line-height: 1.4;
+            font-size: 0.875rem;
+            color: colors.$purple-300;
+        }
+
+        span {
+            color: colors.$white;
+            background: colors.$gray-600;
+            line-height: 1.4;
+            padding: 0.125rem 0.5rem;
+            border-radius: 999px;
+            font-weight: 700;
+            margin-left: 0.5rem;
+        }
+    }
+
+    .tasksListEmpty {
+        border-top: 1px solid colors.$gray-600;
+        padding-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: colors.$gray-500;
+        line-height: 1.4;
+        border-radius: 8px;
+        
+        svg {
+            color: colors.$gray-600;
+            margin-bottom: 1rem;
+        }
+    }
+}
